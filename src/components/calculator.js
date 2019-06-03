@@ -84,7 +84,7 @@ class Calculator extends React.Component {
   }
 
   render() {
-    console.log(this.props.log);
+    // console.log(this.props.log);
     let logDisplay = this.props.log.map((equ, i) => <div key={i}>{equ}</div>);
     return (
       <div className='calculator'>

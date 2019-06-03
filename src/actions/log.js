@@ -21,7 +21,7 @@ export const postEquation = equation => dispatch => {
     // .then(res => normalizeResponseErrors(res))
     // not calling next line, commenting previous line fixes
     .then(() => {
-      console.log('post Equation Success');
+      // console.log('post Equation Success');s
       return dispatch(postEquationSuccess(equation))
     })
     .catch(err => dispatch(postEquationError(err)));

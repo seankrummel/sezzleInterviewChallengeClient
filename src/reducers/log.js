@@ -6,12 +6,12 @@ export default function reducer(state = initialState, action) {
     case 'FETCH_LOGS_REQUEST':
       return {...state, error: null, loading: true};
     case 'POST_EQUATION_SUCCESS':
-      console.log('here!');
+      // console.log('here!');
       let newLog
       if (state.log.length === 10) newLog = state.log.slice(0, 9);
       else newLog = [...state.log]
       newLog.unshift(action.data);
-      console.log(newLog);
+      // console.log(newLog);
       return {...state, log: newLog, loading: false};
     case 'FETCH_LOGS_SUCCESS':
       return {...state, log: action.data, loading: false};
