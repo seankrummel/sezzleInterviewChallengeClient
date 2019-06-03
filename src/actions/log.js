@@ -39,12 +39,12 @@ const fetchLogsError = err => ({
   err
 });
 export const fetchLogs = () => dispatch => {
-  console.log('here!')
+  // console.log('here!')
   dispatch(fetchLogsRequest());
   return fetch(`${API_BASE_URL}`)
     .then(res => normalizeResponseErrors(res))
     .then(res => {
-      console.log(res);
+      // console.log(res);
       dispatch(fetchLogsSuccess(res))
     })
     .catch(err => dispatch(fetchLogsError(err)));
