@@ -12,13 +12,14 @@ class Calculator extends React.Component {
 
   componentDidMount() {
     this.props.dispatch(fetchLogs());
+    this.startPeriodicRefresh();
   }
   componentWillUnmount() {
     this.stopPeriodicRefresh();
   }
 
   startPeriodicRefresh() {
-    this.refreshInterval = setInterval(this.props.dispatch(fetchLogs), 1000) // check for updates every second
+    this.refreshInterval = setInterval(() => this.props.dispatch(fetchLogs()), 1000) // check for updates every second
   }
   stopPeriodicRefresh() {
     if (!this.refreshInterval) return;

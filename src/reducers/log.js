@@ -1,6 +1,7 @@
 const initialState = {log: [], error: null, loading: false};
 
 export default function reducer(state = initialState, action) {
+  // console.log(state);
   switch(action.type) {
     case 'POST_EQUATION_REQUEST':
     case 'FETCH_LOGS_REQUEST':
